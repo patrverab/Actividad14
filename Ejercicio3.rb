@@ -1,21 +1,21 @@
 
 # Crear un menú que permita registrar la información de los alumnos del curso.
 
-Opción 1: Permite ingresar los datos de una persona:
-Nombre
-Edad
-Comuna
-Género
-Opción 2: Permite editar los datos de la persona.
-Opción 3: Permite eliminar una persona.
-Opción 4: Muestra la cantidad de personas ingresadas.
-Opción 5: Muestra las comunas de todas las personas.
-hint: Generar un array con las comunas, eliminar repeticiones. Considerar que pueden haber nombres escritos con mayúscula y minúscula.
-Opción 6: Muestra una lista con todas las personas que tengan entre 20 y 25 años.
-Opción 7: Muestra la suma de las edades de todas las personas.
-Opción 8: Muestra el promedio de las edades del grupo.
-Opción 9: Muestra dos listas de personas, una por cada género.
-El menú debe repetirse hasta que el usuario ingrese la opción 10 (salir).
+# Opción 1: Permite ingresar los datos de una persona:
+# Nombre
+# Edad
+# Comuna
+# Género
+# Opción 2: Permite editar los datos de la persona.
+# Opción 3: Permite eliminar una persona.
+# Opción 4: Muestra la cantidad de personas ingresadas.
+# Opción 5: Muestra las comunas de todas las personas.
+# hint: Generar un array con las comunas, eliminar repeticiones. Considerar que pueden haber nombres escritos con mayúscula y minúscula.
+# Opción 6: Muestra una lista con todas las personas que tengan entre 20 y 25 años.
+# Opción 7: Muestra la suma de las edades de todas las personas.
+# Opción 8: Muestra el promedio de las edades del grupo.
+# Opción 9: Muestra dos listas de personas, una por cada género.
+# El menú debe repetirse hasta que el usuario ingrese la opción 10 (salir).
 
 list = []
 def add_person(array)
@@ -58,18 +58,23 @@ def delete_person(people)
   puts 'ingrese el nombre del  alumno a eliminar'
   name = gets.chomp
   elegido = people.select{|erson| person[:nombre] == name}
-  if
-
+  if elegido.length == 0
+    puts "#{nombre} no existe"
   else
   people.delete_if{|person| person[:nombre] == name}
   puts " El alumno #{name} fue eliminado"
 end
-
+end
 
 def total_personas(alumnos)
+  total = people.count
+  puts "El total de alumnos es #{total}."
 end
+
 def comunas_personas(alumnos)
+  student.each{ |hash| comuna.push(hash[:comuna]) unique }
 end
+
 def lista_poredad_personas(alumnos)
 end
 def suma_personas(alumnos)
